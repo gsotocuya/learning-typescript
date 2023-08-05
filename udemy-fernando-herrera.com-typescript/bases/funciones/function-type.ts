@@ -4,16 +4,16 @@
     const greet = (name:string) => `Hola ${name}`;
     const saveTheWorld = () => `El mundo está salvado!`;
 
-    let myFunction: Function;
+    let myFunction:() => string;
 
-    // !myFunction = 10;
-    // !console.log(myFunction);
+    //* myFunction = 10;
+    //* console.log(myFunction);
 
-    myFunction = addNumber;
-    console.log(myFunction(1,2));
+    // myFunction = addNumber;
+    // console.log(myFunction(1,2));
 
-    myFunction = greet;
-    console.log(myFunction('Fernando'));
+    //? myFunction = greet;
+    //? console.log(myFunction('Fernando'));
 
 
     myFunction = saveTheWorld;
