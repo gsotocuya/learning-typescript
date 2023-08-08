@@ -5,13 +5,9 @@
         age: 24,
         powers: ["Súper velocidad", "Viajar en el tiempo"],
     };
-    flash = {
-        name: 'Clark kent',
-        //  age: 60,
-        powers: ['Súper fueza'],
-        getName() {
-            return this.name;
-        }
+    let superman = {
+        name: "Clark Kent",
+        age: 24,
+        powers: ["Súper velocidad"],
     };
-    console.log(flash.getName());
 })();
