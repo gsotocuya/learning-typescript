@@ -1,26 +1,46 @@
 "use strict";
-// funciones Básicas
-function sumar(a, b) {
-    return a + b;
-}
-const contar = (heroes) => {
-    return heroes.length;
+//Objetos
+const batimovil = {
+    carroceria: "Negra",
+    modelo: "6x6",
+    antibalas: true,
+    pasajeros: 4,
 };
-const superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
-contar(superHeroes);
-//parametros por defecto
-const llamarBatman = (llamar = true) => {
-    if (llamar) {
-        console.log("Batiseñal activada");
-    }
+const bumblebee = {
+    carroceria: "Amarillo con negro",
+    modelo: "4x3",
+    antibalas: true,
+    pasajeros: 4,
+    disparar() {
+        console.log("Disparando");
+    },
 };
-llamarBatman();
-//Rest?
-const unirheroes = (...personas) => {
-    return personas.join(", ");
+const villanos = [
+    {
+        nombre: "lex luthor",
+        edad: 54,
+        mutante: false,
+    },
+    {
+        nombre: "Erik Magnus Lehnsherr",
+        edad: 54,
+        mutante: true,
+    },
+    {
+        nombre: "James Login",
+        edad: undefined,
+        mutante: true,
+    },
+];
+const charles = {
+    poder: "psiquico",
+    estatura: 1.78
 };
-//Tipo function
-const noHaceNada = (numero, text, booleano, arreglo) => { };
-//crear el tipo de function que acepte la function "noHacenada"
-let noHaceNadaTampoco;
-noHaceNadaTampoco = noHaceNada;
+const apocalipsis = {
+    lider: true,
+    miembros: ["magneto", "Tormenta", "Psylocke", "angel"]
+};
+//Mystique, debe poder ser cualquiera de esos dos mutantes(charles o apocalipsis)
+let mystique;
+mystique = charles;
+mystique = apocalipsis;

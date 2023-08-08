@@ -1,32 +1,76 @@
-// funciones Básicas
-function sumar(a:number, b:number):number{
-    return a + b;
+//Objetos
+
+type Car = {
+  carroceria: string;
+  modelo: string;
+  antibalas: boolean;
+  pasajeros: number;
+  disparar?: () => void;
+};
+
+const batimovil: Car = {
+  carroceria: "Negra",
+  modelo: "6x6",
+  antibalas: true,
+  pasajeros: 4,
+};
+
+const bumblebee: Car = {
+  carroceria: "Amarillo con negro",
+  modelo: "4x3",
+  antibalas: true,
+  pasajeros: 4,
+  disparar() {
+    console.log("Disparando");
+  },
+};
+
+//villanos debe ser un arreglo de objetos personalizados
+type villano = {
+  nombre: string;
+  edad: number;
+  mutante: boolean;
+};
+const villanos: villano[] = [
+  {
+    nombre: "lex luthor",
+    edad: 54,
+    mutante: false,
+  },
+  {
+    nombre: "Erik Magnus Lehnsherr",
+    edad: 54,
+    mutante: true,
+  },
+  {
+    nombre: "James Login",
+    edad: undefined,
+    mutante: true,
+  },
+];
+
+//multiples tipos
+//cree dos tipos, uno para charles y otro para apocalipsis
+type Charles ={
+    poder:string;
+    estatura:Number;
+}
+const charles:Charles = {
+    poder:"psiquico",
+    estatura:1.78
 }
 
-const contar = (heroes:string[]):number => {
-    return heroes.length;
+type Apocalipsis = {
+    lider: boolean;
+    miembros: string[];
 }
-const  superHeroes:string[] = ["Flash", "Arrow", "Superman", "Linterna Verde"];
-contar(superHeroes);
-
-//parametros por defecto
-const llamarBatman = (llamar:boolean = true):void=>{
-    if(llamar){
-        console.log("Batiseñal activada");
-    }
+const apocalipsis:Apocalipsis = {
+    lider:true,
+    miembros: ["magneto", "Tormenta", "Psylocke", "angel"]
 }
 
-llamarBatman();
+//Mystique, debe poder ser cualquiera de esos dos mutantes(charles o apocalipsis)
+let mystique: Charles | Apocalipsis;
 
-//Rest?
-const unirheroes = ( ...personas:string[]):string => {
-    return personas.join(", ");
-}
-
-//Tipo function
-const noHaceNada = (numero:number, text:string, booleano:boolean,arreglo:string[])=>{}
-
-//crear el tipo de function que acepte la function "noHacenada"
-let noHaceNadaTampoco:(n:number, s:string, b:boolean, a:string[])=>void;
-
-noHaceNadaTampoco = noHaceNada;
+mystique = charles;
+mystique = apocalipsis;
