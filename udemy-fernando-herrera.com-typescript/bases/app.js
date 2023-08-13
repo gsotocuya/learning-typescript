@@ -36,6 +36,8 @@ const charles = {
     poder: "psiquico",
     estatura: 1.78
 };
+console.log("paso por aquí");
+console.log("paso por aca");
 const apocalipsis = {
     lider: true,
     miembros: ["magneto", "Tormenta", "Psylocke", "angel"]
@@ -45,3 +47,4 @@ console.log(apocalipsis);
 let mystique;
 mystique = charles;
 mystique = apocalipsis;
+//# sourceMappingURL=app.js.map
