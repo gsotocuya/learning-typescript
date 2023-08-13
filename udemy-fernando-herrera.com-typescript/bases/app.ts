@@ -1,5 +1,5 @@
 //Objetos
-
+(() => {
 type Car = {
   carroceria: string;
   modelo: string;
@@ -51,32 +51,35 @@ const villanos: villano[] = [
 
 //multiples tipos
 //cree dos tipos, uno para charles y otro para apocalipsis
-type Charles ={
-    poder:string;
-    estatura:Number;
-}
+type Charles = {
+  poder: string;
+  estatura: Number;
+};
 
-const charles:Charles = {
-    poder:"psiquico",
-    estatura:1.78
-}
+const charles: Charles = {
+  poder: "psiquico",
+  estatura: 1.78,
+};
 console.log("paso por aquí");
 
 type Apocalipsis = {
-    lider: boolean;
-    miembros: string[];
-}
+  lider: boolean;
+  miembros: string[];
+};
 console.log("paso por aca");
 
-const apocalipsis:Apocalipsis = {
-    lider:true,
-    miembros: ["magneto", "Tormenta", "Psylocke", "angel"]
-}
+const apocalipsis: Apocalipsis = {
+  lider: true,
+  miembros: ["magneto", "Tormenta", "Psylocke", "angel"],
+};
 
-console.log(apocalipsis)
+console.log(apocalipsis);
 
 //Mystique, debe poder ser cualquiera de esos dos mutantes(charles o apocalipsis)
 let mystique: Charles | Apocalipsis;
 
 mystique = charles;
 mystique = apocalipsis;
+
+
+})()
