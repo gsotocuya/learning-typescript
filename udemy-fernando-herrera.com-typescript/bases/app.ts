@@ -69,6 +69,8 @@ const apocalipsis:Apocalipsis = {
     miembros: ["magneto", "Tormenta", "Psylocke", "angel"]
 }
 
+console.log(apocalipsis)
+
 //Mystique, debe poder ser cualquiera de esos dos mutantes(charles o apocalipsis)
 let mystique: Charles | Apocalipsis;
 
