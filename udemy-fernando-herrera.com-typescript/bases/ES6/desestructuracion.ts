@@ -24,6 +24,11 @@
     console.log(ironman, resto);
   };
 
-  printAvenger(avengers);
+  // printAvenger(avengers);
+
+  const avengerArr: [string, boolean, number] = ['Cap. América', true, 1212.2121];
+
+  const [ capitan, ironman, seriaUnNumero] = avengerArr;
+  // console.log({ironman, capitan})
 
 })()
