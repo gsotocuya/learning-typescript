@@ -1,14 +1,12 @@
 "use strict";
-(() => {
-    class Avenger {
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-        }
-    }
-    Avenger.avgAge = 35;
-    const antman = new Avenger('AntMan', 'Capitan');
-    console.log(antman);
-})();
+var Validations;
+(function (Validations) {
+    Validations.validateText = (text) => {
+        return text.length > 3;
+    };
+    Validations.validateDAte = (myDate) => {
+        return isNaN(myDate.valueOf());
+    };
+})(Validations || (Validations = {}));
+console.log(Validations.validateText('Gri'));
 //# sourceMappingURL=main.js.map
